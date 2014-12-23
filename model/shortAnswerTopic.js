@@ -1,3 +1,5 @@
+var Question = require('./question');
+
 function ShortAnswerTopic(topicName, standardAnswer, goal) {
   Question.call(this, topicName, standardAnswer, goal);
 }
@@ -16,3 +18,4 @@ ShortAnswerTopic.prototype.countScore = function (inputAnswers) {
   });
   return score;
 };
+module.exports = ShortAnswerTopic;

@@ -1,3 +1,5 @@
+var Question = require('./question');
+
 function TrueOrFalseTopic(topicName, standardAnswer, goal) {
   Question.call(this, topicName, standardAnswer, goal);
 }
@@ -17,3 +19,4 @@ TrueOrFalseTopic.prototype.countScore = function(inputAnswers) {
   });
   return score;
 };
+module.exports = TrueOrFalseTopic;

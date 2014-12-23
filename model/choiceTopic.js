@@ -1,3 +1,5 @@
+var Question = require('./question');
+
 function ChoiceTopic(topicName, standardAnswer, goal) {
   Question.call(this, topicName, standardAnswer, goal);
 }
@@ -16,13 +18,4 @@ ChoiceTopic.prototype.countScore = function (inputAnswers) {
   });
   return score;
 };
-
-// ChoiceTopic.prototype.calculate = function (document) {
-//
-//   var radioElements = document.getElementsByName(this.name);
-//
-//   var checkedElement = _.find(radioElements, { checked: true });
-//   if (checkedElement) {
-//     this.score = this.answer === checkedElement.value ? this.scoreUnit : 0;//三元表达式
-//   }
-// };
+module.exports = ChoiceTopic;

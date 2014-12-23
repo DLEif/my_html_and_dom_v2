@@ -1,6 +1,15 @@
+var Question = require('./model/question');
+
+var Answer = require('./model/buildTopics');
+
+$(document).ready(function() {
+  $('#submit').on('click', function() {
+    return checkform();
+  });
+});
 function checkform(){
   var score = 0;
-  var inputs = Question.all();
+  var inputs = Answer.buildTopics();
 //  console.log(inputs);
   _.forEach(inputs, function(input){
     var inputAnswers = document.getElementsByName(input.topicName);
@@ -44,12 +53,3 @@ function requiredInput(requiredInputs) {
 
   return false;
 }
-
-// JudgeNull.getjudgeNull = function() {
-//   var personName = document.getElementById("name").value;
-//   var personId = document.getElementById("id").value;
-//   var personClass = document.getElementById("class").value;
-//   if(personName === ''|| personId === '' || personClass === ''){
-//     alert("Please improve personal information.");
-//   }
-// };

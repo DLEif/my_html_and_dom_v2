@@ -1,3 +1,5 @@
+var Question = require('./question');
+
 function MultipleChoiceTopic(topicName, standardAnswer, goal) {
   Question.call(this, topicName, standardAnswer, goal);
 }
@@ -22,3 +24,4 @@ MultipleChoiceTopic.prototype.countScore = function (inputAnswers) {
 
   return score;
 };
+module.exports = MultipleChoiceTopic;

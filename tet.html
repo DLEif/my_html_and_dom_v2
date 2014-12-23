@@ -4,22 +4,12 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
   <title>统一建模语言理论测试</title>
-  <script type="text/javascript" src="main.js" ></script>
-  <script type="text/javascript" src="model/question.js" ></script>
-  <script type="text/javascript" src="model/buildTopics.js" ></script>
-  <script type="text/javascript" src="model/MultipleChoiceTopic.js" ></script>
-  <script type="text/javascript" src="model/TrueOrFalseTopic.js" ></script>
-  <script type="text/javascript" src="model/shortAnswerTopic.js" ></script>
-  <script type="text/javascript" src="model/choiceTopic.js" ></script>
-  <script type="text/javascript" src="model/fillInTopic.js" ></script>
-  <script type="text/javascript" src="lib/lodash-2.4.1/lodash.js" ></script>
-  <script type="text/javascript" src="lib/lodash-2.4.1/lodash.compat.js"></script>
   <script type="text/javascript" src="lib/jquery-2.1.1/jquery-2.1.1.js"></script>
+  <script type="text/javascript" src="lib/lodash-2.4.1/lodash.js" ></script>
+  <script type="text/javascript" src="ThePapers.js" ></script>
   <link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="CSS/style.css">
-  <title>
-    test-paper
-  </title>
+
 </head>
   <body>
     <div class="panel panel-default style">
@@ -92,8 +82,10 @@
                   1.UML 与软件工程的关系是：<br/>
                 </label>
                 <div class="radio">
+                  <label for="relation1">
                   <input type="radio" id="relation1" name="2_1" value="A" />
-                  <label>(A)UML 就是软件工程</label><br/>
+                  (A)UML 就是软件工程
+                  </label><br/>
                 </div>
                 <div class="radio">
                   <input type="radio" id="relation2"  name="2_1" value="B" />
@@ -259,7 +251,7 @@
         </div>
         <p>
           <center>
-            <input type="button" value='提交' onclick="checkform()"></input>
+            <input id="submit" type="submit" value="提交"></input>
           </center>
         </p>
 
